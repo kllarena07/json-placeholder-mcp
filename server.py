@@ -11,10 +11,11 @@ def get_all_posts(
     return response.json()
 
 @mcp.tool()
-def get_one_post(
+def get_post_from_id(
+    id: int,
     description="Get one post from JSONPlaceholder"
 ):
-    response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
+    response = requests.get(f"https://jsonplaceholder.typicode.com/posts/{id}")
     return response.json()
 
 if __name__ ==  "__main__":
