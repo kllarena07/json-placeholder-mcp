@@ -13,7 +13,7 @@ def get_all_posts(
 @mcp.tool()
 def get_post_from_id(
     id: int,
-    description="Get one post from JSONPlaceholder"
+    description="Get a post by id from JSONPlaceholder"
 ):
     response = requests.get(f"https://jsonplaceholder.typicode.com/posts/{id}")
     return response.json()
